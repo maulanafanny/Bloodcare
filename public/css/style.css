@@ -1,0 +1,216 @@
+p,
+div,
+a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-brand {
+    margin: 10px;
+}
+
+.navbar {
+    font-family: helvetica;
+    font-weight: 700;
+}
+
+.nav-item {
+    width: 100px;
+    height: 69px;
+    text-align: center;
+}
+
+.nav-link {
+    margin-top: 16px;
+}
+
+.big {
+    transition: 0.5s;
+    text-decoration: none;
+    color: black;
+}
+
+.big:hover {
+    background-color: red;
+    text-decoration: none;
+    margin: 0 40px;
+    color: white;
+    transform: scale(1.1);
+}
+
+.needcard {
+    transition: 0.5s;
+    text-decoration: none;
+    color: black;
+}
+
+.needcard:hover {
+    text-decoration: none;
+    color: black;
+    transform: scale(1.05);
+}
+
+.accord {
+    background-color: #f1f3f2;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    margin: 0;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+.active-nav {
+    transition: 0.5s;
+    background-color: red;
+    color: white;
+}
+
+.act:hover {
+    transition: 0.5s;
+    background-color: red;
+    color: white;
+}
+
+.act,
+.accord:hover {
+    background-color: red;
+    color: white;
+    transform: scale(1.1);
+}
+
+.accord:after {
+    content: "\002B";
+    float: right;
+}
+
+.act:after {
+    content: "\2212";
+}
+
+.panel {
+    color: #444;
+    padding: 18px;
+    margin: 0;
+    outline: none;
+}
+
+.alink {
+    color: #ababab;
+    font-weight: 550;
+}
+
+.alink:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.button {
+    background-color: #f1f3f2;
+}
+
+.button:hover {
+    background-color: red;
+    color: white;
+}
+
+.inpt {
+    border-radius: 30px;
+    width: 450px;
+    border-style: none;
+    padding-left: 55px;
+    padding-right: 90px;
+}
+
+.inpt:focus {
+    outline: none;
+}
+
+.inpt-icon {
+    position: absolute;
+    color: crimson;
+    font-size: 30px;
+}
+
+.sbmt {
+    position: absolute;
+    border-radius: 0 30px 30px 0;
+    right: 15px;
+    width: 80px;
+    border-style: none;
+}
+
+.logcard {
+    text-align: center;
+}
+
+.al-success {
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    z-index: 2000;
+    width: 80%;
+}
+
+.box {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+
+.has-error {
+    border-color: #cc0000;
+    background-color: #ffff99;
+}
+
+.input-sign {
+    border-color: #444;
+}
+
+.input-log {
+    max-width: 240px;
+    border-color: #444;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    color: black;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: red;
+    border-color: red;
+}
+
+.page-link:hover {
+    color: red;
+}
+
+.search-blood {
+    color: #777777;
+    float: left;
+    width: 175px;
+    border-radius: 35px;
+    border: none;
+    height: 56px
+}
+
+.form-control-request {
+    background-color: #f4f5f8;
+    border-style: none;
+    padding: 23px;
+}
+
+.custom-select-request {
+    background-color: #f4f5f8;
+    border-style: none;
+    padding-left: 23px;
+    height: 46px;
+}
+
+.btn-request {
+    border-radius: 50px;
+}
