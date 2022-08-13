@@ -17,11 +17,10 @@
 	<br>
 	<br>
 
-	<div class="row justify-content-center">
+	<div class="card-columns">
 		@foreach ($content as $col)
-		<div class="col-3 mb-4">
 
-			<div class="card shadow">
+			<div class="card shadow mb-4">
 				<img src="{{ $col->getElementsByTagName("enclosure")->item(0)->attributes["url"]->nodeValue }}" class="card-img-top" alt="...">
 				<div class="card-body">
 					<p class="mb-2"><small class="text-danger">{{ date('l, d F Y', strtotime($col->getElementsByTagName("pubDate")->item(0)->nodeValue)) }}</small></p>
@@ -40,9 +39,7 @@
 					<br>
 				</div>
 			</div>
-		</div>
-			<br>
-			<br>
+
 		@endforeach
 	</div>
 
