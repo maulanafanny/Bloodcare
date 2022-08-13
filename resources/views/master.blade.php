@@ -10,20 +10,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <script src="{{ asset('js/script.js') }}"></script>
 </head>
 
 <body>
 
     <header>
-        
+
         <!-- Navigation Bar -->
-        <nav class="navbar shadow mb-5 fixed-top navbar-expand-lg navbar-light"
-            style="padding: 0; background-color: #f1f3f2;">
-            <a href="#" class="navbar-brand" style="font-family: Helvetica; font-size: 33px; font-weight: bold;">
+        <nav class="navbar shadow mb-5 fixed-top navbar-expand-lg navbar-light" style="padding: 0; background-color: #f1f3f2;">
+            <a href="#" class="navbar-brand" style="font-size: 33px; font-weight: bold;">
                 <img style="vertical-align: -50%;" src="{{ asset('img/bloodcare.jpg') }}" width="80" height="80" class="d-inline-block">
                 Bloodcare
             </a>
-            <button class="mr-3 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="mr-3 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -38,64 +39,57 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav" style="margin-left: 50px; position: relative; top: 22px;">
-                    <li class="{{ Request::path() == 'home' ? 'active active-nav' : '' }} nav-item"
-                        id="{{ Request::path() == 'home' ? 'act' : '' }}">
+                    <li class="{{ Request::path() == 'home' ? 'active active-nav' : '' }} nav-item" id="{{ Request::path() == 'home' ? 'act' : '' }}">
                         <a class="nav-link" href="/home">HOME</a>
                     </li>
-                    <li class="{{ Request::path() == 'artikel' ? 'active active-nav' : '' }} nav-item"
-                        id="{{ Request::path() == 'artikel' ? 'act' : '' }}">
+                    <li class="{{ Request::path() == 'artikel' ? 'active active-nav' : '' }} nav-item" id="{{ Request::path() == 'artikel' ? 'act' : '' }}">
                         <a class="nav-link" href="/artikel">ARTIKEL</a>
                     </li>
-                    <li class="{{ Request::path() == 'permohonan' ? 'active active-nav' : '' }} nav-item"
-                        id="{{ Request::path() == 'permohonan' ? 'act' : '' }}"
-                        style="width: 160px">
+                    <li class="{{ Request::path() == 'permohonan' ? 'active active-nav' : '' }} nav-item" id="{{ Request::path() == 'permohonan' ? 'act' : '' }}" style="width: 160px">
                         <a class="nav-link" href="/permohonan">PERMOHONAN</a>
                     </li>
-                    <li class="{{ Request::path() == 'events' ? 'active active-nav' : '' }} nav-item"
-                        id="{{ Request::path() == 'events' ? 'act' : '' }}">
+                    <li class="{{ Request::path() == 'events' ? 'active active-nav' : '' }} nav-item" id="{{ Request::path() == 'events' ? 'act' : '' }}">
                         <a class="nav-link" href="/events">ACARA</a>
                     </li>
-                    <li class="{{ Request::path() == 'faq' ? 'active active-nav' : '' }} nav-item"
-                        id="{{ Request::path() == 'faq' ? 'act' : '' }}">
+                    <li class="{{ Request::path() == 'faq' ? 'active active-nav' : '' }} nav-item" id="{{ Request::path() == 'faq' ? 'act' : '' }}">
                         <a class="nav-link" href="/faq">FAQ</a>
                     </li>
-                    <li class="{{ Request::path() == 'tentang' ? 'active active-nav' : '' }} nav-item"
-                        id="{{ Request::path() == 'tentang' ? 'act' : '' }}">
+                    <li class="{{ Request::path() == 'tentang' ? 'active active-nav' : '' }} nav-item" id="{{ Request::path() == 'tentang' ? 'act' : '' }}">
                         <a class="nav-link" href="/tentang">TENTANG</a>
                     </li>
                 </ul>
 
                 {{-- Login & Sign Up Button --}}
                 @auth
-                <div class="ml-auto">
-                    <ul class="navbar-nav">
+                    <div class="ml-auto">
+                        <ul class="navbar-nav">
 
-                        @if (session('login') == 'admin')
-                        <li class="nav-item">
-                            <a class="nav-link" href="/dashboard">ADMIN</a>
-                        </li>
-                        @endif
+                            @if (session('login') == 'admin')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/dashboard">ADMIN</a>
+                                </li>
+                            @endif
 
-                        <li class="nav-item mr-2">
-                            <a class="nav-link" href="/logout">LOGOUT</a>
-                        </li>
-                    </ul>
-                </div>
+                            <li class="nav-item mr-2">
+                                <a class="nav-link" href="/logout">LOGOUT</a>
+                            </li>
+                        </ul>
+                    </div>
                 @else
-                <div class="ml-auto">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/signup">DAFTAR</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/login">MASUK</a>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="ml-auto">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/signup">DAFTAR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login">MASUK</a>
+                            </li>
+                        </ul>
+                    </div>
                 @endauth
 
             </div>
-            
+
 
         </nav>
     </header>
@@ -112,6 +106,11 @@
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
         </div>
     @endif
+
+    {{-- Floating Scroll to Top Button --}}
+    <button type="button" class="btn btn-danger btn-floating btn-lg rounded-circle" id="btn-back-to-top">
+        ↑
+    </button>
 
     @yield('konten')
 
@@ -241,8 +240,7 @@
         <br>
         <br>
 
-        <div class="footer-copyright text-center py-4"
-            style="background-color: #192027; color: #999; font-weight: 100;">
+        <div class="footer-copyright text-center py-4" style="background-color: #192027; color: #999; font-weight: 300;">
             © Bloodcare 2021. All rights reserved.
         </div>
 

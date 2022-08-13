@@ -17,34 +17,34 @@
 	<br>
 	<br>
 
-	@foreach ($content as $row)
-	<div class="card shadow">
-		<div class="card-body p-4">
-			<h3 class="text-body"><a class="text-body" href="{{ $row->getElementsByTagName("link")->item(0)->nodeValue }}">{{ $row->getElementsByTagName("title")->item(0)->nodeValue }}</a></h3>
-			<hr>
-			<div class="row">
-				<div class="col-md-3">
-					<p>{{ date('l, d F Y', strtotime($row->getElementsByTagName("pubDate")->item(0)->nodeValue)) }}</p>
+	<div class="row justify-content-center">
+		@foreach ($content as $col)
+		<div class="col-3 mb-4">
+
+			<div class="card shadow">
+				<img src="{{ $col->getElementsByTagName("enclosure")->item(0)->attributes["url"]->nodeValue }}" class="card-img-top" alt="...">
+				<div class="card-body">
+					<p class="mb-2"><small class="text-danger">{{ date('l, d F Y', strtotime($col->getElementsByTagName("pubDate")->item(0)->nodeValue)) }}</small></p>
+					<h6 class="card-title font-weight-bold"><a class="article-link" href="{{ $col->getElementsByTagName("link")->item(0)->nodeValue }}">{{ $col->getElementsByTagName("title")->item(0)->nodeValue }}</a></h6>
+					<div class="card-text mb-2">
+						<p class="article-desc mb-2"><small class="text-muted">{{ $col->getElementsByTagName("description")->item(0)->nodeValue }}</small></p>
+						<a class="article-link" href="{{ $col->getElementsByTagName("link")->item(0)->nodeValue }}"><small class="font-weight-bold">Read More »</small></a>
+					</div>
+			
+					@php $i = 0 @endphp
+					@while (!empty($col->getElementsByTagName("category")->item($i)->nodeValue))
+						<span class="badge badge-danger" style="margin-right: 8px">{{ $col->getElementsByTagName("category")->item($i)->nodeValue }}</span>
+						@php $i++; @endphp
+					@endwhile
+			
 					<br>
-					<img src="{{ $row->getElementsByTagName("enclosure")->item(0)->attributes["url"]->nodeValue }}" class="img-responsive img-thumbnail mb-5">
-				</div>
-				<div class="col-md-9">
-					<p>{{ $row->getElementsByTagName("description")->item(0)->nodeValue }}</p>
 				</div>
 			</div>
-	
-			@php $i = 0 @endphp
-			@while (!empty($row->getElementsByTagName("category")->item($i)->nodeValue))
-				<span class="badge badge-danger" style="margin-right: 8px">{{ $row->getElementsByTagName("category")->item($i)->nodeValue }}</span>
-				@php $i++; @endphp
-			@endwhile
-	
-			<br>
 		</div>
+			<br>
+			<br>
+		@endforeach
 	</div>
-		<br>
-		<br>
-	@endforeach
 
 </div>
 

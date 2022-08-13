@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
 p,
 div,
-a {
-    font-family: Arial, Helvetica, sans-serif;
+a,
+body {
+    font-family: 'Inter', sans-serif;
 }
 
 .navbar-brand {
@@ -102,8 +105,8 @@ a {
 }
 
 .alink:hover {
-	text-decoration: none;
-	color: white;
+    text-decoration: none;
+    color: white;
 }
 
 .button {
@@ -213,4 +216,31 @@ a {
 
 .btn-request {
     border-radius: 50px;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.article-desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.article-link {
+    color: black;
+}
+
+.article-link:hover {
+    text-decoration: none;
+    color: #cc0000;
 }
