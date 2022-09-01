@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DOMDocument;
 use App\Models\Need;
 use App\Models\User;
 use App\Models\Event;
@@ -18,8 +19,13 @@ class PageController extends Controller
 
 	public function artikel()
 	{
+		$feed_url = "https://www.voaindonesia.com/api/ztgq_ei_ov";
+		$object = new DOMDocument();
+		$object->load($feed_url);
+		$content = $object->getElementsByTagName("item");
 		return view('artikel', [
-			'route' => 'Artikel'
+			'route' => 'Artikel',
+			'content' => $content
 		]);
 	}
 
@@ -58,7 +64,7 @@ class PageController extends Controller
 			'events' => $events->orderByDesc('date')->paginate(9)
 		]);
 	}
-	
+
 	public function event(Event $events)
 	{
 		return view('event', [

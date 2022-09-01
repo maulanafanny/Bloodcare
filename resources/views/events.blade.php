@@ -2,9 +2,9 @@
 
 @section('konten')
 
-<div class="container-fluid mb-5" style="background-color: red; margin-top: -9px">
+<div class="container-fluid mb-5 bg-danger" style="margin-top: -9px">
     <div class="container pl-1">
-        <h3 class="mb-0 py-5"><strong>Acara Donor Darah</strong></h3>
+        <h3 class="mb-0 py-5 text-light"><strong>Acara Donor Darah</strong></h3>
     </div>
 </div>
 
@@ -20,12 +20,11 @@
 </div>
 
 <!-- Cards -->
-<div class="container-fluid">
-    <div class="col card-deck justify-content-center">
+<div class="container">
+    <div class="card-columns justify-content-center" style="column-gap: 2.5rem">
         @foreach ($events as $event)
-        <div class="row-mb-5">
-            <a class="card shadow mb-5 big" style="min-width: 253px; max-width: 350px" href="/event/{{ $event->id }}">
-                <img src="{{ $event->image }}" style="background-color: #f1f3f298; max-height: 550px" class="card-img-top">
+            <a class="card shadow mb-5 event-card" href="/event/{{ $event->id }}">
+                <img src="{{ $event->image }}" class="w-100" style="background-color: #f1f3f298;" class="card-img-top">
                 <div class="card-body">
                     <h5 class="text-capitalize"><strong>{{ $event->title }}</strong></h5>
                     <ul class="list-group mt-3">
@@ -44,7 +43,6 @@
                     </ul>
                 </div>
             </a>
-        </div>
         @endforeach
     </div>
     <br>

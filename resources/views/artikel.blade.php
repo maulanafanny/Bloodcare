@@ -2,20 +2,13 @@
 
 @section('konten')
 
-@php
-	$feed_url = "https://www.voaindonesia.com/api/ztgq_ei_ov";
-	$object = new DOMDocument();
-	$object->load($feed_url);
-	$content = $object->getElementsByTagName("item");
-@endphp
-
-<br>
+<div class="container-fluid mb-5 bg-danger" style="margin-top: -9px">
+    <div class="container pl-1">
+        <h3 class="mb-0 py-5 text-light"><strong>Artikel Kesehatan Terkini</strong></h3>
+    </div>
+</div>
 
 <div class="container">
-	<br />
-	<h2 style="font-family: helvetica; font-weight: bold; text-align: center">Artikel Kesehatan Terkini</h2>
-	<br>
-	<br>
 
 	<div class="card-columns">
 		@foreach ($content as $col)

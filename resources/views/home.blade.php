@@ -2,7 +2,7 @@
 
 @section('konten')
 {{-- Search --}}
-<div class="pb-3 pt-3" style="background-color: red; margin-top: -9px; text-align: center; float: left; width: 100%">
+<div class="pb-3 pt-3 bg-danger" style="margin-top: -9px; text-align: center; float: left; width: 100%">
 	<div class="container">
 		<form method="GET" action="/needs" class="row justify-content-center mx-0">
 			<div class="col-md-auto pr-0">
@@ -126,7 +126,7 @@
 		hooks: new ChartisanHooks()
 			.title('Jumlah Stok Darah')
 			.responsive(true)
-			.colors(['#dd0000'])
+			.colors(['#dc3545'])
 			.legend({ position: 'bottom' }),
 	})
 </script>

@@ -241,7 +241,7 @@
         <br>
 
         <div class="footer-copyright text-center py-4" style="background-color: #192027; color: #999; font-weight: 300;">
-            © Bloodcare 2021. All rights reserved.
+            © Bloodcare 2022. All rights reserved.
         </div>
 
     </footer>

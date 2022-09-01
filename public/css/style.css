@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
 
+:root {
+    --red: #dc3545;
+}
+
 p,
 div,
 a,
@@ -26,6 +30,10 @@ body {
     margin-top: 16px;
 }
 
+.nav-item.active > a {
+    color: white !important;
+}
+
 .big {
     transition: 0.5s;
     text-decoration: none;
@@ -33,11 +41,24 @@ body {
 }
 
 .big:hover {
-    background-color: red;
+    background-color: var(--red);
     text-decoration: none;
     margin: 0 40px;
     color: white;
     transform: scale(1.1);
+}
+
+.event-card {
+    transition: 0.5s;
+    text-decoration: none;
+    color: black;
+}
+
+.event-card:hover {
+    background-color: var(--red);
+    text-decoration: none;
+    color: white;
+    transform: scale(1.05);
 }
 
 .needcard {
@@ -66,19 +87,19 @@ body {
 
 .active-nav {
     transition: 0.5s;
-    background-color: red;
+    background-color: var(--red);
     color: white;
 }
 
 .act:hover {
     transition: 0.5s;
-    background-color: red;
+    background-color: var(--red);
     color: white;
 }
 
 .act,
 .accord:hover {
-    background-color: red;
+    background-color: var(--red);
     color: white;
     transform: scale(1.1);
 }
@@ -114,7 +135,7 @@ body {
 }
 
 .button:hover {
-    background-color: red;
+    background-color: var(--red);
     color: white;
 }
 
@@ -184,12 +205,12 @@ body {
 .page-item.active .page-link {
     z-index: 1;
     color: #fff;
-    background-color: red;
-    border-color: red;
+    background-color: var(--red);
+    border-color: var(--red);
 }
 
 .page-link:hover {
-    color: red;
+    color: var(--red);
 }
 
 .search-blood {

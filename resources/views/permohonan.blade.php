@@ -8,9 +8,9 @@
     });
 </script>
 
-<div class="container-fluid mb-5" style="background-color: red; margin-top: -9px">
+<div class="container-fluid mb-5 bg-danger" style="margin-top: -9px">
     <div class="container">
-        <h3 class="mb-0 py-5"><strong>Permohonan Kebutuhan Donor Pasien</strong></h3>
+        <h3 class="mb-0 py-5 text-light"><strong>Permohonan Kebutuhan Donor Pasien</strong></h3>
     </div>
 </div>
 
